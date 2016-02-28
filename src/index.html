@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="app" lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>RSA - Assignment 1</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body ng-controller="MainController">
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>RSA Algorithm</h1>
+            <p>Liuri Loami Ruyz Jorge - D14128549</p>
+        </div>
+    </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="btn btn-primary btn-block btn-generate" ng-click="generateKeys()">Generate new keys</button>
+                <h3>Prime numbers:</h3>
+                <p><b>P = </b> {{ p }}</p>
+                <p><b>Q = </b> {{ q }}</p>
+                <h3>Public key:</h3>
+                <p><b>E = </b> {{ e }}</p>
+                <p><b>N = </b> {{ n }}</p>
+                <h3>Private key:</h3>
+                <p><b>D = </b> {{ d }}</p>
+                <p><b>N = </b> {{ n }}</p>
+                <h3>Encrypt message:</h3>
+                <input type="text" class="form-group" ng-model="to_encrypt">
+                <p class="msg"><b>Message encrypted:</b> {{ encrypted }}</p>
+                <h3>Decrypt message:</h3>
+                <input type="text" class="form-group" ng-model="to_decrypt">
+                <p class="msg"><b>xMessage encrypted:</b> {{ decrypted }}</p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/app.js"></script>
+<script src="/js/big.min.js"></script>
+</body>
+</html> 
