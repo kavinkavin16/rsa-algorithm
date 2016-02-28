@@ -4,6 +4,5 @@ This repository contains the complete Javascript implementation of the RSA Algor
 
 ## TODO
 
-- Use CDN for third-party Javascript files
 - Implement the BigInteger library
 - Implement the RSA algorithm itself
