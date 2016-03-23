@@ -18,28 +18,33 @@
         <div class="modal-content">
             <div class="modal-body">
                 <button class="btn btn-primary btn-block btn-generate" ng-click="generateKeys()">Generate new keys</button>
-                <h3>Prime numbers:</h3>
-                <p><b>P = </b> {{ p }}</p>
-                <p><b>Q = </b> {{ q }}</p>
-                <h3>Public key:</h3>
-                <p><b>E = </b> {{ e }}</p>
-                <p><b>N = </b> {{ n }}</p>
-                <h3>Private key:</h3>
-                <p><b>D = </b> {{ d }}</p>
-                <p><b>N = </b> {{ n }}</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Public key:</h3>
+                        <p><b>E = </b> {{ e }}</p>
+                        <p><b>N = </b> {{ n }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Private key:</h3>
+                        <p><b>D = </b> {{ d }}</p>
+                        <p><b>N = </b> {{ n }}</p>
+                    </div>
+                </div>
                 <h3>Encrypt message:</h3>
                 <input type="text" class="form-group" ng-model="to_encrypt">
                 <p class="msg"><b>Message encrypted:</b> {{ encrypted }}</p>
                 <h3>Decrypt message:</h3>
                 <input type="text" class="form-group" ng-model="to_decrypt">
-                <p class="msg"><b>xMessage encrypted:</b> {{ decrypted }}</p>
+                <p class="msg"><b>Message decrypted:</b> {{ decrypted }}</p>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://code.angularjs.org/1.4.8/angular.min.js"></script>
-    <script src="lib/BigInteger.js"></script>
+    <script src="lib/SuperInteger.js"></script>
+    <script src="lib/Primes.js"></script>
+    <script src="lib/RSA.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
